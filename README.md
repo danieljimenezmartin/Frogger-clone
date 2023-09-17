@@ -33,7 +33,6 @@
 *   Implementar un sistema de detección de colisiones para controlar las interacciones entre el personaje y los obstáculos. Cuando el personaje colisiona con un obstáculo, se produce una animación de colisión y se pierde una vida. Si el número de vidas llega a cero la partida termina.
 *   Dotar a nuestra rana de distintas posiciones en función de la última tecla de movimiento pulsada, de manera que el movimiento parezca más realista.
 *   Utilización y manejo del setInterval para controlar el "tempo" del juego que marcará el movimiento de los distintos elementos, así como el contador de tiempo para cada partida.
-*   Programación de los distintos eventos en función del resultado: pérdida de vida por finalización de tiempo o choque con obstáculos, reinicio de partida, conseguir un objetivo dentro del tiempo, conseguir todos los objetivos y ganar la partida.
 *   Desarrollar un contador de vidas que van disminuyendo si no se consiguen los objetivos hasta llegar a cero, momento en el que finalizará la partida.
 *   Desarrollar un sistema de puntuación en función del tiempo empleado en conseguir el objetivo.
 *   Implementación de la aparición aleatoria de elementos extras durante la partida, cuya consecución aumentará la puntuación del jugador. Estos objetos permanecerá visibles un período de tiempo, también aleatorio, y posteriormente desaparecerán.
