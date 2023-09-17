@@ -58,7 +58,7 @@ Este proyecto no necesita instalación.
 <br/>
 
 ## <a name="ver-proyecto"></a>Ver el proyecto ⚡
-- https://danieljimenezmartin.github.io/Juego-memoria-Pokemon/
+https://danieljimenezmartin.github.io/Frogger-clone/
 <br/>
 
 ## <a name="desarrollo"></a>Desarrollo 📐
