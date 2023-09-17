@@ -41,12 +41,13 @@
 *   Desarrollo de un diseño responsive, adaptable a los distintos dispositivos en los que pueda ejecutarse el juego.  
 <br/>
 
-## <a name="aprendizaje"></a>Aprendizaje y Desarrollo 📚
+## <a name="aprendizaje"></a>Aprendizaje 📚
 Este proyecto de clon de Frogger representa un hito importante en mi viaje de aprendizaje de JavaScript. Durante el proceso de creación, he adquirido y aplicado una serie de conocimientos y habilidades clave:
 *   Profundización en JavaScript: Este proyecto me permitió profundizar en el lenguaje JavaScript. Aprendí a utilizar funciones, objetos y eventos para crear la lógica del juego.
 *   Gestión de Eventos y Animaciones: Implementé un sistema de gestión de eventos para controlar las interacciones del jugador y los elementos del juego.
 *   Estructura de Código Organizada: Para mantener mi código organizado y mantenible utilicé clases y módulos de JavaScript para dividir el código en componentes reutilizables.
 *   Resolución de Problemas: Durante el desarrollo del juego, enfrenté varios desafíos técnicos, como el seguimiento de múltiples objetos en movimiento y la sincronización de eventos. Aprendí a abordar estos problemas de manera sistemática y a buscar soluciones eficientes.
+<br/>
 
 ## <a name="conclusion"></a>Conclusión final 🏆
 *   Este proyecto no solo me ha brindado la oportunidad de aplicar los conocimientos teóricos adquiridos en el curso, sino que también me ha permitido explorar más allá y enfrentar desafíos prácticos del mundo real. Ha sido una experiencia de aprendizaje valiosa que me ha preparado para proyectos más complejos en el futuro y para contribuir activamente en el mundo del desarrollo de juegos y la programación web.
