@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Frogger</title>
+</head>
+
+<body>
+    <h1>Frogger</h1>
+    <div class="container">
+        <button id="start">Start</button>
+        <button id="restart" class="hide">Restart</button>
+        <p class="time">Time left: <span id="time-left">20</span></p>
+        <p id="result">result</p>
+        <div class="board">
+            <div class="grass"></div>
+            <div class="finish-line"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="finish-line"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="finish-line"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="trunks-to-right trunk1"></div>
+            <div class="trunks-to-right trunk2"></div>
+            <div class="trunks-to-right trunk3"></div>
+            <div class="trunks-to-right water"></div>
+            <div class="trunks-to-right water"></div>
+            <div class="trunks-to-right trunk1"></div>
+            <div class="trunks-to-right trunk2"></div>
+            <div class="trunks-to-right trunk3"></div>
+            <div class="trunks-to-right water"></div>
+            <div class="trunks-to-left water"></div>
+            <div class="trunks-to-left trunk1"></div>
+            <div class="trunks-to-left trunk2"></div>
+            <div class="trunks-to-left trunk3"></div>
+            <div class="trunks-to-left water"></div>
+            <div class="trunks-to-left water"></div>
+            <div class="trunks-to-left trunk1"></div>
+            <div class="trunks-to-left trunk2"></div>
+            <div class="trunks-to-left trunk3"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="cars-to-right car"></div>
+            <div class="cars-to-right road"></div>
+            <div class="cars-to-right road"></div>
+            <div class="cars-to-right car"></div>
+            <div class="cars-to-right road"></div>
+            <div class="cars-to-right road"></div>
+            <div class="cars-to-right car"></div>
+            <div class="cars-to-right road"></div>
+            <div class="cars-to-right road endLine"></div>
+            <div class="cars-to-left car startLine"></div>
+            <div class="cars-to-left road"></div>
+            <div class="cars-to-left road"></div>
+            <div class="cars-to-left car"></div>
+            <div class="cars-to-left road"></div>
+            <div class="cars-to-left road"></div>
+            <div class="cars-to-left car"></div>
+            <div class="cars-to-left road"></div>
+            <div class="cars-to-left road endLine"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="start-line"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+            <div class="grass"></div>
+        </div>
+        <div class="game-info">
+            <div class="lifes">
+                <span class="lifes-left"></span>
+                <span class="lifes-left"></span>
+                <span class="lifes-left"></span>
+                <span class="lifes-left"></span>
+                <span class="lifes-left"></span>
+            </div>
+            <div class="points">0 points</div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

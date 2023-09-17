@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url(../fonts/PublicPixel.ttf) format('truetype');
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --start: #d80a82;
+    --url-start: url(../assets/nenufar.png);
+    --finish-line: linear-gradient(45deg, var(--black) 25%, transparent 0, transparent 75%, var(--black) 0), linear-gradient(45deg, var(--black) 25%, transparent 0, transparent 75%, var(--black) 0);
+    --green: #01850c;
+    --url-grass: url('../assets/grass.png');
+    --road: #303030;
+    --url-road: url('../assets/road.png');
+    --car: #d61010;
+    --trunk: #944f00;
+    --water: #04bcd4;
+    --url-water: url('../assets/water.png');
+    --frog-square-color: var(--url-start);
+    --url-trunk1-right: url('../assets/trunk-right-1.png');
+    --url-trunk2: url('../assets/trunk-2.png');
+    --url-trunk3-right: url('../assets/trunk-right-3.png');
+    --url-trunk1-left: url('../assets/trunk-left-1.png');
+    --url-trunk3-left: url('../assets/trunk-left-3.png');
+    --frog-position: var(--frog-up);
+    --frog-up: url('../assets/frog.png');
+    --frog-right: url('../assets/frog-right.png');
+    --frog-down: url('../assets/frog-down.png');
+    --frog-left: url('../assets/frog-left.png');
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2a2a2a;
+    color: #fff;
+    font-family: 'Pixel', sans-serif;
+}
+
+.container {
+    width: 370px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10vw;
+    color: #4db847;
+    letter-spacing: 1rem;
+    text-shadow: -5px 0px 0 #cd6c8f, -5px 5px 0 #f0f22e;
+}
+
+button.hide {
+    display: none;
+}
+
+button{
+    display: block;
+    appearance: none;
+    font-family: inherit;
+    font-size: 4vw;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: #4db847;
+    border: none;
+    height: 2em;
+    width: 8em;
+    position: relative;
+    cursor: pointer;
+    max-height: 80px;
+    max-width: 315px;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: -.4em;
+    left: -.4em;
+    background-color: #6ffa67;
+    height: 1.4em;
+    width: 8.8em;
+    z-index: -1;
+    border-top: .2em solid var(--white);
+    border-left: .2em solid var(--white);
+    border-right: .2em solid var(--white);
+    box-shadow: -.2em -.2em 0 #555, .2em -.2em 0 #555, -.2em 0 0 #555,  .2em 0 0 #555;
+    max-height: 85px;
+    max-width: 348px;
+
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 1em;
+    left: -.4em;
+    background-color: #258620;
+    height: 1.4em;
+    width: 8.8em;
+    z-index: -1;
+    border-left: .2em solid #cecece;
+    border-right: .2em solid #cecece;
+    border-bottom: .2em solid #cecece;
+    box-shadow: .2em .2em 0 #555, -.2em .2em 0 #555, .2em 0 0 #555, -.2em 0 0 #555, .2em .6em 0 #444, -.2em .6em 0 #444;
+    max-height: 60px;
+    max-width: 348px;
+
+}
+
+button:active {
+    background-color: #62bb5e;
+}
+
+button:active::before {
+    background-color: #258620;
+    border-left: .2em solid #cecece;
+    border-right: .2em solid #cecece;
+    border-top: .2em solid #cecece;
+    box-shadow: -.2em -.2em 0 #555, .2em -.2em 0 #555, -.2em 0 0 #555,  .2em 0 0 #555;
+
+}
+
+button:active::after {
+    background-color: #6ffa67;
+    border-bottom: .2em solid var(--white);
+    border-left: .2em solid var(--white);
+    border-right: .2em solid var(--white);
+    box-shadow: .2em .2em 0 #555, -.2em .2em 0 #555, .2em 0 0 #555, -.2em 0 0 #555, .2em .6em 0 #444, -.2em .6em 0 #444;
+}
+
+.time {
+    margin-top: 4rem;
+    font-size: 1.4em;
+}
+
+#result {
+    font-size: 2em;
+    font-weight: bold;
+    color: crimson;
+    text-transform: uppercase;
+    transform: scale(0);
+    transition: transform .5s ease-in;
+}
+
+#result.show {
+    transform: scale(1);
+}
+
+.board {
+    border: 2px solid #01850c;
+    display: flex;
+    flex-wrap: wrap;
+    height: 364px;
+    width: 364px;
+}
+
+.board div {
+    height: 40px;
+    width: 40px;
+}
+
+.start-line {
+    background: var(--url-start), var(--url-grass);
+    background-color: var(--start);
+}
+
+.finish-line {
+    background-image: var(--finish-line);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    background-color: var(--white);
+}
+
+.grass {
+    background: var(--url-grass);
+    background-color: var(--green);
+}
+
+.trunk {
+    background-color: var(--trunk);
+}
+
+.trunks-to-right.trunk1 {
+    background: var(--url-trunk1-right);
+}
+
+.trunks-to-right.trunk2 {
+    background: var(--url-trunk2);
+}
+
+.trunks-to-right.trunk3 {
+    background: var(--url-trunk3-right);
+}
+
+.trunks-to-left.trunk1{
+    background: var(--url-trunk1-left);
+}
+
+.trunks-to-left.trunk2{
+    background: var(--url-trunk2);
+}
+
+.trunks-to-left.trunk3{
+    background: var(--url-trunk3-left);
+}
+
+.water {
+    background: var(--url-water);
+    background-color: var(--water);
+}
+
+.car.cars-to-right {
+    background: url('../assets/car-right.png'), var(--url-road);
+    background-color: var(--road);
+}
+
+.car.cars-to-left {
+    background: url('../assets/car-left.png'), var(--url-road);
+    background-color: var(--road);
+}
+
+.road {
+    background: url('../assets/road.png');
+    background-color: var(--road);
+}
+
+.frog {
+    background: var(--frog-position), var(--frog-square-color) !important;
+    background-color: var(--green);
+}
+
+.frog-win {
+    background: url(../assets/frog-win.png), var(--url-grass);
+    background-color: var(--green);
+}
+
+.skull {
+    background: url(../assets/skull.png), var(--frog-square-color) !important;
+}
+
+.fly {
+    background: url(../assets/fly.png), var(--url-grass);
+}
+
+.game-info {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lifes {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    width: 50%;
+}
+
+.lifes-left {
+    background: url(../assets/frog.png) 0 0;
+    background-size: 25px 25px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+.points {
+    font-size: .9em;
+}
+
+@media only screen and (width > 1000px) {
+    h1 {
+        font-size: 8em;
+    }
+    
+    button{
+        font-size: 40px;
+    }
+    
+    button:active {
+        background-color: #62bb5e;
+    }
+}
